@@ -32,7 +32,3 @@ const PROVINCES = {
 };
 const LEVELS=['一线','新一线','二线','三线','四线','五线','未分级'];
 function initialCities(){return applyUserTiers(Object.entries(PROVINCES).flatMap(([province,names])=>names.split(' ').map(name=>({id:province+'-'+name,province,name,level:'未分级',enabled:!['香港','澳门','台湾'].includes(province)}))))}
-function makeDemoShop(city,index,keyword='拼豆',taskId='demo-seed'){
- const names=['豆趣拼豆工作室','像素花园手作','一颗豆拼豆体验馆','豆岛手作空间','小小像素拼豆屋','拾光拼豆工坊'];
- return {uid:`demo-${taskId}-${city.id}-${index}`,poiUid:`demo-poi-${city.id}-${index}`,name:`${names[index%names.length]}（示例）`,province:city.province,city:city.name,level:city.level,address:`${city.name} · 演示商圈 ${index%3+1}（非真实地址）`,phone:'',keyword,review:index%3===1?'待核验':'关键词匹配',source:'演示数据',collectedAt:new Date().toLocaleString('zh-CN',{timeZone:'Asia/Shanghai',hour12:false}),taskId,lat:null,lng:null};
-}

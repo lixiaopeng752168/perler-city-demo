@@ -1,15 +1,15 @@
 <!doctype html>
 <html lang="zh-CN">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="拼豆门店采集工作台：管理城市分级、配置采集任务、筛选与导出店铺。当前为交互原型。"><title>豆迹 · 拼豆门店采集演示</title><link rel="stylesheet" href="style.css"></head>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="拼豆门店采集工作台：管理城市分级、配置采集任务、筛选与导出店铺。通过 Chrome 采集扩展读取百度地图实际搜索结果。"><title>豆迹 · 拼豆门店采集面板</title><link rel="stylesheet" href="style.css"></head>
 <body>
 <aside class="sidebar">
   <a class="brand" href="#overview"><span class="beads"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><span>豆迹<small>城市门店情报</small></span></a>
   <div class="nav-label">工作空间</div>
   <nav id="nav"></nav>
-  <div class="side-bottom"><div class="connection"><span class="status-dot"></span>百度地图 · 待接入</div><p>先定义范围，再发现门店。</p><button class="side-help" data-page="settings">接入资料与说明 <span>↗</span></button><div class="avatar-row"><span class="avatar">豆</span><div>演示工作台<small>交互演示 v0.2</small></div></div></div>
+  <div class="side-bottom"><div class="connection"><span class="status-dot"></span>百度地图 · 浏览器采集</div><p>先定义范围，再发现门店。</p><button class="side-help" data-page="settings">接入资料与说明 <span>↗</span></button><div class="avatar-row"><span class="avatar">豆</span><div>本地采集工作台<small>浏览器采集 v1.0</small></div></div></div>
 </aside>
-<div class="main-shell"><header class="topbar"><div><span class="crumb">工作空间</span><span class="slash">/</span><span id="breadcrumb">采集概览</span></div><div class="header-right"><span class="badge amber">演示模式</span><span class="top-divider"></span><span>公开演示 · 本机保存</span><span class="avatar small">豆</span></div></header><main id="app"></main><footer>豆迹 WORKSPACE <span>城市等级采用用户名单 · 门店为演示数据 · 尚未连接百度地图</span></footer></div>
+<div class="main-shell"><header class="topbar"><div><span class="crumb">工作空间</span><span class="slash">/</span><span id="breadcrumb">采集概览</span></div><div class="header-right"><span id="collector-badge" class="badge amber">检测采集扩展…</span><span class="top-divider"></span><span>真实采集 · 本机保存</span><span class="avatar small">豆</span></div></header><main id="app"></main><footer>豆迹 WORKSPACE <span>城市等级采用用户名单 · 门店来源百度地图网页 · 候选门店需核验</span></footer></div>
 <dialog id="detail"><div id="detail-content"></div><button class="btn" id="close-detail">关闭详情</button></dialog>
 <input type="file" id="city-file" accept=".csv,text/csv" hidden><div id="toast" role="status" aria-live="polite"></div>
-<script src="data.js"></script><script src="user-tiers.js"></script><script src="app.js"></script>
+<script src="data.js"></script><script src="user-tiers.js"></script><script src="client.js"></script><script src="app.js"></script>
 </body></html>

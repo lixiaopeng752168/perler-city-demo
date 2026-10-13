@@ -2,3 +2,5 @@
 .chip{border:0}.table-select{border:1px solid var(--line);border-radius:4px;padding:4px 8px;color:#56724a;background:#fbfcf8}#review-select{border:1px solid var(--line);border-radius:4px;padding:5px;color:var(--green)}
 
 .demo-banner{display:flex;align-items:center;justify-content:space-between;gap:18px;border:1px solid #dbe7d4;border-radius:9px;background:#edf4e8;padding:15px 19px;margin-bottom:25px;color:#537448}.demo-banner b{font-size:12px;font-weight:600}.demo-banner p{font-size:11px;line-height:1.8;margin:5px 0 0;color:#7b9070}.demo-banner .badge{background:#dcead3;color:#60864f}@media(max-width:640px){.demo-banner{align-items:flex-start;padding:13px;gap:8px}.demo-banner .badge{font-size:9px;white-space:normal;min-width:62px;text-align:center}}
+
+.connection-box p{line-height:1.8}.requirements p{line-height:1.8} .field select{max-width:100%}
